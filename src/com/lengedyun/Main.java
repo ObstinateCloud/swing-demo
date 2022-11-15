@@ -34,7 +34,7 @@ public class Main {
 //        //这个需要放在最后
 //        frame.setVisible(true);
 
-        MyJFrame jFrame = new MyJFrame("legend");
+        MyJFrame jFrame = new MyJFrame();
 
 
     }

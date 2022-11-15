@@ -22,12 +22,7 @@ public class Test1 {
         JLabel jLabel = new JLabel();
 
         JButton jButton = new JButton("获取时间");
-        jButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                jLabel.setText(LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME));
-            }
-        });
+        jButton.addActionListener(e -> jLabel.setText(LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME)));
 
         JPanel jPanel = new JPanel();
         jPanel.add(jButton);
