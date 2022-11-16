@@ -13,10 +13,12 @@ import java.awt.*;
  */
 public class MyJFrame extends JFrame {
 
-    public MyJFrame(String title) throws HeadlessException {
+    private JPanel jPanel;
 
-        super(title);
-        MyJPanel jPanel = new MyJPanel();
+    public MyJFrame() throws HeadlessException {
+
+        super("legend");
+        jPanel = new JPanel();
 
         jPanel.setBackground(Color.BLUE);
 
@@ -26,7 +28,15 @@ public class MyJFrame extends JFrame {
 
         this.setSize(800,600);
 
-        this.setVisible(true);
 
+
+    }
+
+    public JPanel getjPanel() {
+        return jPanel;
+    }
+
+    public void setjPanel(JPanel jPanel) {
+        this.jPanel = jPanel;
     }
 }
