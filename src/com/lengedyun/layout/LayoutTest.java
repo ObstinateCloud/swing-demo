@@ -15,14 +15,14 @@ public class LayoutTest {
 
         //参考链接 https://zhuanlan.zhihu.com/p/372373627
 
-        defaultLayout();
-        borderLayoutTest();
-        cardLayoutTest();
-        gridLayoutTest();
-        gridBagLayoutTest();
-        boxLayoutTest();
-
-
+//        defaultLayout();
+//        borderLayoutTest();
+//        cardLayoutTest();
+//        gridLayoutTest();
+//        gridBagLayoutTest();
+//        boxLayoutTest();
+//        handleLayout();
+        customerLayout();
 
 
     }
@@ -213,4 +213,50 @@ public class LayoutTest {
         frame.setBounds(100,100,400,200);
         frame.setVisible(true);
     }
+
+    //手工布局器 自己指定每一个控件的位置
+    public static void handleLayout(){
+        JFrame frame=new JFrame("手动布局");
+        frame.setSize(800,600);
+
+        JPanel jPanel = new JPanel();
+        //取消默认布局
+        jPanel.setLayout(null);
+
+        JButton jButton = new JButton("左上角");
+        jButton.setBounds(0,0,80,60);
+
+        jPanel.add(jButton);
+
+
+        frame.setContentPane(jPanel);
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+
+
+    public static void customerLayout(){
+        JFrame frame=new JFrame("自定义布局器");
+        frame.setSize(800,600);
+
+        JPanel jPanel = new JPanel();
+        //取消默认布局
+        jPanel.setLayout(new CustomerLayout());
+
+
+        jPanel.add(new JButton("1"));
+        jPanel.add(new JButton("2"));
+        jPanel.add(new JButton("3"));
+        jPanel.add(new JButton("4"));
+        jPanel.add(new JButton("5"));
+        jPanel.add(new JButton("6"));
+
+
+        frame.setContentPane(jPanel);
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+
 }

@@ -8,6 +8,11 @@ import java.awt.*;
 public class Main {
 
     public static void main(String[] args) {
+
+        /**
+         * 参考教程B站 阿发你好 java swing教程
+         */
+
         //Jxxx控件 java.swing包
         //xxx控件 java.awt包
 
